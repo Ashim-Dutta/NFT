@@ -31,7 +31,7 @@ const App = () => {
     { content: <p>My portfolio looks stunning here 😍. Feels super professional!</p> },
     { content: "Got discovered by a major brand through this site 🏆. Life-changing!" },
     { content: <p>Love the customization features 🎛️. My page feels truly mine.</p> },
-    { content: "So happy I joined this platform 🤩. It’s a game-changer!" },
+    { content: "So happy I joined this platform 🤩. It's a game-changer!" },
     { content: <p>My engagement is way up since joining 📈💬. Highly recommend!</p> },
   ];
 
@@ -39,37 +39,39 @@ const App = () => {
     <div className='bg-gradient-to-br from-white to-gray-100 relative min-h-screen p-4 md:p-10 overflow-hidden'>
       <HeroSection />
 
-      <div className='w-full flex flex-col md:flex-row justify-evenly items-center gap-10'>
+      <div className='w-full flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-10'>
         <Section_2 />
         <DecayCard />
       </div>
 
       <Section_3/>
 
-      <SplitText
-        text="Trusted by the best."
-        delay={150}
-        animateBy="words"
-        direction="bottom"
-        className="text-center font-bold text-gray-800 text-2xl md:text-4xl lg:text-5xl xl:text-6xl mt-10"
-      />
+      <div className='my-10 md:my-20'>
+        <SplitText
+          text="Trusted by the best."
+          delay={150}
+          animateBy="words"
+          direction="bottom"
+          className="text-center font-bold text-gray-800 text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
+        />
 
-      <SplitText
-        text="our growth hackers are experts in their field."
-        delay={150}
-        animateBy="words"
-        direction="bottom"
-        className="text-center font-bold text-gray-800 text-sm md:text-xl mt-5 mb-[10rem]"
-      />
+        <SplitText
+          text="our growth hackers are experts in their field."
+          delay={150}
+          animateBy="words"
+          direction="bottom"
+          className="text-center font-bold text-gray-800 text-sm md:text-xl mt-2 md:mt-5 mb-10 md:mb-[10rem]"
+        />
+      </div>
 
       <ScrollVelocity
         texts={['Inspire -', '- Boldly']} 
         className="custom-scroll-text opacity-40"
       />
 
-      <div className='min-h-[60vh] w-full flex flex-col justify-center items-center px-4 relative'>
-        <h2 className='text-center absolute mt-auto text-xl md:text-2xl lg:text-4xl'>
-          Wheather you're artist 🧑‍🎨 or not want to sell your work <br/> / or buy seeking <span className='text-green-500'>unique </span> pieces <span className='opacity-30'> connects <br/> you to world of creativity commerce.</span> <i className="ri-shopping-cart-line text-6xl text-orange-400"></i>
+      <div className='min-h-[50vh] md:min-h-[60vh] w-full flex flex-col justify-center items-center px-4 relative my-10 md:my-20'>
+        <h2 className='text-center absolute mt-auto text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl px-4'>
+          Whether you're artist 🧑‍🎨 or not, want to sell your work <br className='hidden sm:block'/> or buy seeking <span className='text-green-500'>unique </span> pieces <span className='opacity-30'><br className='hidden sm:block'/> connects you to world of creativity commerce.</span> <i className="ri-shopping-cart-line text-4xl md:text-6xl text-orange-400"></i>
         </h2>
 
         <ImageTrail
@@ -87,14 +89,14 @@ const App = () => {
         />
       </div>
 
-      <div className='flex flex-col lg:flex-row items-center justify-between mb-10 relative min-h-[80vh] overflow-hidden px-4 gap-10'>
-        <div className='flex flex-col items-center justify-center w-full lg:w-1/2'>
+      <div className='flex flex-col lg:flex-row items-center justify-between mb-10 md:mb-20 relative min-h-[50vh] md:min-h-[80vh] overflow-hidden px-4 gap-4 md:gap-10'>
+        <div className='flex flex-col items-center justify-center w-full lg:w-1/2 mb-10 lg:mb-0'>
           <SplitText
             text="Our vision for any art Technology."
             delay={150}
             animateBy="words"
             direction="bottom"
-            className="text-center font-bold text-gray-800 font-[unbounded] text-2xl md:text-4xl lg:text-5xl"
+            className="text-center font-bold text-gray-800 font-[unbounded] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
           />
 
           <SplitText
@@ -102,32 +104,32 @@ const App = () => {
             delay={10}
             animateBy="words"
             direction="bottom"
-            className="text-center text-sm md:text-lg mt-5 mb-[5rem]"
+            className="text-center text-sm md:text-lg mt-3 md:mt-5 mb-5 md:mb-[5rem]"
           />
         </div>
 
-        <div className='relative w-full lg:w-[40%] h-[40vh]'>
+        <div className='relative w-full lg:w-[40%] h-[30vh] sm:h-[40vh]'>
           <CardSwap cardDistance={60} verticalDistance={70} delay={2000} pauseOnHover={false}>
-            <Card><h1 className='text-white text-3xl uppercase'>yuji_itadori</h1><img src="https://i.pinimg.com/736x/8d/e6/66/8de66630423ad3f8352ace451684b097.jpg" alt="Card 1" className="w-full h-full object-cover rounded-lg" /></Card>
-            <Card><h1 className='text-white text-3xl uppercase'>Gojo</h1><img src="https://i.pinimg.com/736x/20/c5/70/20c570d5df79447cfb22b378f166ae07.jpg" alt="Card 2" className="w-full h-full object-cover rounded-lg" /></Card>
-            <Card><h1 className='text-white text-3xl uppercase'>Monkey D. Luffy</h1><img src="https://i.pinimg.com/736x/9a/77/cf/9a77cf67f7bb6d74080f35626138b596.jpg" alt="Card 3" className="w-full h-full object-cover rounded-lg" /></Card>
+            <Card><h1 className='text-white text-xl sm:text-2xl md:text-3xl uppercase'>yuji_itadori</h1><img src="https://i.pinimg.com/736x/8d/e6/66/8de66630423ad3f8352ace451684b097.jpg" alt="Card 1" className="w-full h-full object-cover rounded-lg" /></Card>
+            <Card><h1 className='text-white text-xl sm:text-2xl md:text-3xl uppercase'>Gojo</h1><img src="https://i.pinimg.com/736x/20/c5/70/20c570d5df79447cfb22b378f166ae07.jpg" alt="Card 2" className="w-full h-full object-cover rounded-lg" /></Card>
+            <Card><h1 className='text-white text-xl sm:text-2xl md:text-3xl uppercase'>Monkey D. Luffy</h1><img src="https://i.pinimg.com/736x/9a/77/cf/9a77cf67f7bb6d74080f35626138b596.jpg" alt="Card 3" className="w-full h-full object-cover rounded-lg" /></Card>
           </CardSwap>
         </div>
       </div>
 
-      <div className='w-full flex flex-col md:flex-row items-center justify-evenly gap-10 mt-10 mb-10 px-4'>
+      <div className='w-full flex flex-col sm:flex-row items-center justify-evenly gap-4 sm:gap-10 my-10 md:my-20 px-4'>
         {[{ to: 100000, text: 'Happy Customers' }, { to: 5000, text: 'Sold NFTs' }, { to: 200, text: 'Partners' }].map(({ to, text }, i) => (
-          <div key={i} className='flex flex-col items-center'>
-            <CountUp from={0} to={to} separator="," direction="up" duration={1} className="text-5xl mb-5 font-semibold" />
-            <SplitText text={text} delay={150} animateBy="words" direction="bottom" className="text-center font-bold text-gray-800 font-[unbounded] text-2xl md:text-4xl" />
+          <div key={i} className='flex flex-col items-center mb-6 sm:mb-0'>
+            <CountUp from={0} to={to} separator="," direction="up" duration={1} className="text-3xl sm:text-4xl md:text-5xl mb-3 md:mb-5 font-semibold" />
+            <SplitText text={text} delay={150} animateBy="words" direction="bottom" className="text-center font-bold text-gray-800 font-[unbounded] text-xl sm:text-2xl md:text-3xl" />
           </div>
         ))}
       </div>
 
-      <div className='flex flex-col items-center justify-center mb-10 mt-[10rem] px-4'>
+      <div className='flex flex-col items-center justify-center mb-10 md:mb-20 mt-10 md:mt-[10rem] px-4'>
         <RotatingText
           texts={['Creative 🧠', 'Unique 💫', 'Boldly 💪', 'Cool! 😎']}
-          mainClassName="px-2 mb-10 bg-[#5227FF] text-white font-bold text-4xl md:text-5xl lg:text-7xl overflow-hidden py-2 rounded-lg"
+          mainClassName="px-2 mb-6 md:mb-10 bg-[#5227FF] text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl overflow-hidden py-2 rounded-lg"
           staggerFrom="last"
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
@@ -142,46 +144,48 @@ const App = () => {
           delay={150}
           animateBy="words"
           direction="bottom"
-          className="w-[90%] md:w-[75%] lg:w-[60%] text-center font-semibold text-gray-800 font-[unbounded] text-2xl md:text-4xl lg:text-5xl xl:text-7xl"
+          className="w-[90%] md:w-[75%] lg:w-[60%] text-center font-semibold text-gray-800 font-[unbounded] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
         />
       </div>
 
-      <div className='mt-20 px-4'>
-        <h1 className='text-4xl uppercase text-center mb-8'>Reviews</h1>
+      <div className='my-10 md:my-20 px-4'>
+        <h1 className='text-2xl sm:text-3xl md:text-4xl uppercase text-center mb-6 md:mb-8'>Reviews</h1>
         <InfiniteScroll items={items} isTilted={true} tiltDirection='left' autoplay={true} autoplaySpeed={2} autoplayDirection="up" pauseOnHover={true} />
       </div>
 
-      <div>
+      <div className='my-10 md:my-20'>
         <Membership/>
       </div>
 
-      <div className='h-[50vh] relative bg-gradient-to-r from-[#d4fc79] to-[#96e6a1] mt-20 rounded-xl mx-auto flex items-center justify-center px-4'>
-        <h1 className='text-6xl md:text-8xl absolute z-[0] font-bold opacity-50 outlined-text'>Creativity</h1>
+      <div className='h-[40vh] md:h-[50vh] relative bg-gradient-to-r from-[#d4fc79] to-[#96e6a1] my-10 md:my-20 rounded-xl mx-auto flex items-center justify-center px-4'>
+        <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl absolute z-[0] font-bold opacity-50 outlined-text'>Creativity</h1>
         <FallingText
-          text={`This isn’t just a gallery 🖼️...`}
+          text={`This isn't just a gallery 🖼️...`}
           highlightWords={["Canvas", "Expression", "Stories", "Discover", "Experience","motion"]}
           highlightClass="highlighted"
           trigger="hover"
           backgroundColor="transparent"
           wireframes={false}
           gravity={0.6}
-          fontSize="1.5rem"
+          fontSize="1rem sm:1.2rem md:1.5rem"
           mouseConstraintStiffness={0.9}
         />
       </div>
 
       <HeroCards/>
 
-      <div className='flex flex-col md:flex-row items-center justify-evenly mt-20 mb-10 px-4 gap-8'>
-        <TrueFocus 
-          sentence="Meet The Developer"
-          manualMode={false}
-          blurAmount={5}
-          borderColor="green"
-          animationDuration={2}
-          pauseBetweenAnimations={1}
-        />
-
+      <div className='flex flex-col md:flex-row items-center justify-center md:justify-evenly my-10 md:my-20 px-4 gap-6 md:gap-8'>
+        <div className='mb-8 md:mb-0'>
+          <TrueFocus 
+            sentence="Meet The Developer"
+            manualMode={false}
+            blurAmount={5}
+            borderColor="green"
+            animationDuration={2}
+            pauseBetweenAnimations={1}
+          />
+        </div>
+        
         <ProfileCard
           name="Ashim Dutta"
           title="Frontend Developer"
